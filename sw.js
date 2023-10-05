@@ -20,7 +20,7 @@ const PRECACHE_URLS = [
 //install handler takes care of precaching resources we always need
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open(PRECACHE).then(cache) {
+    caches.open(PRECACHE).then(function(cache) {
       return cache.addAll(PRECACHE_URLS);
   })
 );
